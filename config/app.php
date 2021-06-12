@@ -181,7 +181,6 @@ return [
         App\Providers\JetstreamServiceProvider::class,
         App\Providers\ViewServiceProvider::class,
         Biscolab\ReCaptcha\ReCaptchaServiceProvider::class,
-        Cierrateam\LaravelCrisp\LaravelCrispServiceProvider::class,
     ],
 
     /*
@@ -236,7 +235,6 @@ return [
         'Image' => Intervention\Image\Facades\Image::class,
         'Cart' => Darryldecode\Cart\Facades\CartFacade::class,
         'ReCaptcha' => Biscolab\ReCaptcha\Facades\ReCaptcha::class,
-        'LaravelCrisp' => Cierrateam\LaravelCrisp\LaravelCrisp::class,
     ],
 
 ];
