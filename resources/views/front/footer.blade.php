@@ -157,6 +157,7 @@
 <script src="{{ asset("js/app.js") }}" type="application/javascript"></script>
 
 <script>
+
     new Vue({
         el: "#app",
         data: {
@@ -333,6 +334,8 @@
 
 
 </script>
+<script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="5dcc28b1-4976-4770-9414-c90f06e293c7";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
+
 @stack('styles')
 
 @stack('scripts')
