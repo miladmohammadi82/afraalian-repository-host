@@ -18,6 +18,7 @@ use App\Http\Controllers\front\CommentProductController as FrontCommentProductCo
 use App\Http\Controllers\front\ContactController;
 use App\Http\Controllers\front\indexController as FrontIndexController;
 use App\Http\Controllers\front\OrderController as FrontOrderController;
+use App\Http\Controllers\ImageSliderController;
 use App\Http\Controllers\indexController;
 use App\Http\Controllers\LikePostController;
 use App\Http\Controllers\OrderController;
@@ -203,6 +204,15 @@ Route::prefix('admin/orders')->middleware('checkRole')->group(function (){
     Route::get('/edit-shipping_status/{order}', [BackOrderController::class, 'editShippingStatus'])->name('order.edit.shipping.status.admin.panel');
 });
 
+Route::prefix('admin/images-slider')->middleware('checkRole')->group(function (){
+    Route::get('/', [ImageSliderController::class, 'index'])->name('imagesSlider.show.admin.panel');
+    Route::get('/new-images-slider', [ImageSliderController::class, 'create'])->name('imagesSlider.new.admin.panel');
+    Route::post('/new-images-slider', [ImageSliderController::class, 'store'])->name('imagesSlider.store.admin.panel');
+    Route::get('/edit-images-slider/{id}', [ImageSliderController::class, 'edit'])->name('imagesSlider.edit.admin.panel');
+    Route::post('/edit-images-slider/{id}', [ImageSliderController::class, 'update'])->name('imagesSlider.update.admin.panel');
+    Route::post('/delete-images-slider/{id}', [ImageSliderController::class, 'destroy'])->name('imagesSlider.destroy.admin.panel');
+    Route::get('/edit-images-slider-status/{id}', [ImageSliderController::class, 'editStatus'])->name('imagesSlider.edit.status.admin.panel');
+});
 
 // End admin router
 

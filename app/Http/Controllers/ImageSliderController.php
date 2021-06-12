@@ -14,7 +14,8 @@ class ImageSliderController extends Controller
      */
     public function index()
     {
-        //
+        $imagesSlider = ImageSlider::orderBy('id', 'DESC')->get();
+        return view('back.pages.imageSlider.imagesSlider', compact('imagesSlider'));
     }
 
     /**
@@ -24,7 +25,7 @@ class ImageSliderController extends Controller
      */
     public function create()
     {
-        //
+        return view('back.pages.imageSlider.newImageSlider');
     }
 
     /**
@@ -35,7 +36,15 @@ class ImageSliderController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'url' => ['required'],
+            'alt' => ['required'],
+        ]);
+
+        $article = ImageSlider::create($request->all());
+
+        session()->flash('success', ' اسلاید با موفقیت ایجاد شد.');
+        return redirect(route('articles.admin.panel'));
     }
 
     /**
@@ -57,7 +66,7 @@ class ImageSliderController extends Controller
      */
     public function edit(ImageSlider $imageSlider)
     {
-        //
+        return view('back.pages.imageSlider.editImageSlider', compact('imageSlider'));
     }
 
     /**
@@ -67,9 +76,19 @@ class ImageSliderController extends Controller
      * @param  \App\Models\ImageSlider  $imageSlider
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, ImageSlider $imageSlider)
+    public function update(Request $request, $id)
     {
-        //
+        $imageSlider = ImageSlider::findOrFail($id);
+
+        $request->validate([
+            'url' => ['required'],
+            'alt' => ['required'],
+        ]);
+
+        $imageSlider->update($request->all());
+
+        session()->flash('success', 'تغییرات با موفقیت انجام شد.');
+        return redirect(route('articles.admin.panel'));
     }
 
     /**
@@ -78,8 +97,30 @@ class ImageSliderController extends Controller
      * @param  \App\Models\ImageSlider  $imageSlider
      * @return \Illuminate\Http\Response
      */
-    public function destroy(ImageSlider $imageSlider)
+    public function destroy($id)
     {
-        //
+        $imageSlider = ImageSlider::findOrFail($id);
+
+        $imageSlider->delete();
+
+        session()->flash('success', 'اسلاید با موفقیت حذف شد.');
+        return redirect(route('articles.admin.panel'));
+    }
+
+    public function editStatus($id)
+    {
+        $imageSlider = ImageSlider::findOrFail($id);
+
+
+        if ($imageSlider->status == 0) {
+            $imageSlider->status = 1;
+        }else{
+            $imageSlider->status = 0;
+        }
+
+        $imageSlider->update();
+
+        session()->flash('success', 'وضعیت با موفقیت تغییر کرد.');
+        return redirect(route('articles.admin.panel'));
     }
 }
