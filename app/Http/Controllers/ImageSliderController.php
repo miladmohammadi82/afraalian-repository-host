@@ -87,7 +87,7 @@ class ImageSliderController extends Controller
 
         $request->validate([
             'url' => ['required'],
-            'alt' => ['required'],
+            'image' => ['required'],
         ]);
 
         $imageSlider->update($request->all());
