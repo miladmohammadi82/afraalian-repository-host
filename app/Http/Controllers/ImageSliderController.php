@@ -46,7 +46,7 @@ class ImageSliderController extends Controller
         $article = ImageSlider::create($request->all());
 
         session()->flash('success', ' اسلاید با موفقیت ایجاد شد.');
-        return redirect(route('articles.admin.panel'));
+        return redirect(route('imagesSlider.show.admin.panel'));
     }
 
     /**
@@ -91,7 +91,7 @@ class ImageSliderController extends Controller
         $imageSlider->update($request->all());
 
         session()->flash('success', 'تغییرات با موفقیت انجام شد.');
-        return redirect(route('articles.admin.panel'));
+        return redirect(route('imagesSlider.show.admin.panel'));
     }
 
     /**
@@ -124,6 +124,6 @@ class ImageSliderController extends Controller
         $imageSlider->update();
 
         session()->flash('success', 'وضعیت با موفقیت تغییر کرد.');
-        return redirect(route('articles.admin.panel'));
+        return redirect(route('imagesSlider.show.admin.panel'));
     }
 }
