@@ -68,6 +68,7 @@ class ImageSliderController extends Controller
      */
     public function edit(ImageSlider $imageSlider)
     {
+        return $imageSlider;
         $title = "ویرایش عکس های اسلایدر وبسایت";
         return view('back.pages.imageSlider.editImageSlider', compact('imageSlider', 'title'));
     }
@@ -107,7 +108,7 @@ class ImageSliderController extends Controller
         $imageSlider->delete();
 
         session()->flash('success', 'اسلاید با موفقیت حذف شد.');
-        return redirect(route('articles.admin.panel'));
+        return redirect(route('imagesSlider.show.admin.panel'));
     }
 
     public function editStatus($id)
