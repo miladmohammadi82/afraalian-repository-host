@@ -66,9 +66,10 @@ class ImageSliderController extends Controller
      * @param  \App\Models\ImageSlider  $imageSlider
      * @return \Illuminate\Http\Response
      */
-    public function edit(ImageSlider $imageSlider)
+    public function edit($id)
     {
-        return $imageSlider;
+        $imageSlider = ImageSlider::findOrFail($id);
+        return $imageSlider; 
         $title = "ویرایش عکس های اسلایدر وبسایت";
         return view('back.pages.imageSlider.editImageSlider', compact('imageSlider', 'title'));
     }
