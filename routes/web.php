@@ -211,7 +211,7 @@ Route::prefix('admin/images-slider')->middleware('checkRole')->group(function ()
     Route::get('/edit-images-slider/{id}', [ImageSliderController::class, 'edit'])->name('imagesSlider.edit.admin.panel');
     Route::post('/edit-images-slider/{id}', [ImageSliderController::class, 'update'])->name('imagesSlider.update.admin.panel');
     Route::post('/delete-images-slider/{id}', [ImageSliderController::class, 'destroy'])->name('imagesSlider.destroy.admin.panel');
-    Route::post('/edit-images-slider-status/{id}', [ImageSliderController::class, 'editStatus'])->name('imagesSlider.edit.status.admin.panel');
+    Route::get('/edit-images-slider-status/{id}', [ImageSliderController::class, 'editStatus'])->name('imagesSlider.edit.status.admin.panel');
 });
 
 // End admin router

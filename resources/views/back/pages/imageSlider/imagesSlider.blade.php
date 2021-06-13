@@ -63,7 +63,7 @@
                                             <i class="fas fa-edit"></i>
                                         </a>&nbsp;
                                         <form method="POST"
-                                            action="{{ route('imagesSlider.edit.status.admin.panel', $imageSlider->id) }}">
+                                            action="{{ route('imagesSlider.destroy.admin.panel', $imageSlider->id) }}">
                                             @csrf
                                             <button type="submit" class="btn btn-danger">
                                                 <i class="fas fa-trash"></i>
