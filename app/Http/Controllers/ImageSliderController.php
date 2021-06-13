@@ -40,7 +40,7 @@ class ImageSliderController extends Controller
     {
         $request->validate([
             'url' => ['required'],
-            'alt' => ['required'],
+            'image' => ['required'],
         ]);
 
         $article = ImageSlider::create($request->all());

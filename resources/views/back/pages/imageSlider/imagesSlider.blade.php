@@ -9,7 +9,7 @@
     <div class="row mt-5">
         <div class="col-12">
             @include('back.pages.layouts.message')
-            <a class="btn btn-primary" href="{{ route('articles.create.admin.panel') }}">افزودن</a>
+            <a class="btn btn-primary" href="{{ route('imagesSlider.new.admin.panel') }}">افزودن</a>
             <div class="card">
 
                 <div class="card-header">
@@ -58,12 +58,12 @@
                                         @endif
                                     </td>
                                     <td>
-                                        <a href="{{ route('imagesSlider.destroy.admin.panel', $imageSlider->id) }}"
+                                        <a href="{{ route('imagesSlider.edit.admin.panel', $imageSlider->id) }}"
                                             class="btn btn-primary">
                                             <i class="fas fa-edit"></i>
                                         </a>&nbsp;
                                         <form method="POST"
-                                            action="{{ route('imagesSlider.edit.admin.panel', $imageSlider->id) }}">
+                                            action="{{ route('imagesSlider.edit.status.admin.panel', $imageSlider->id) }}">
                                             @csrf
                                             <button type="submit" class="btn btn-danger">
                                                 <i class="fas fa-trash"></i>
