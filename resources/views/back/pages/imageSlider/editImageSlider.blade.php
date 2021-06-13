@@ -18,7 +18,7 @@
                         </div>
                     @endif
 
-                    <form action="{{ route('imagesSlider.update.admin.panel') }}" method="post">
+                    <form action="{{ route('imagesSlider.update.admin.panel', $imageSlider->id) }}" method="post">
                         @csrf
                         <div class="input-fild-box form-group">
                             <label for="">تصویر</label>
