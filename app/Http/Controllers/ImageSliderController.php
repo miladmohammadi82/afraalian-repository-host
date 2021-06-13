@@ -69,7 +69,7 @@ class ImageSliderController extends Controller
     public function edit($id)
     {
         $imageSlider = ImageSlider::findOrFail($id);
-        return $imageSlider; 
+
         $title = "ویرایش عکس های اسلایدر وبسایت";
         return view('back.pages.imageSlider.editImageSlider', compact('imageSlider', 'title'));
     }
