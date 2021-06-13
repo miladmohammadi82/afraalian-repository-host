@@ -14,8 +14,9 @@ class ImageSliderController extends Controller
      */
     public function index()
     {
+        $title = "عکس های اسلایدر وبسایت";
         $imagesSlider = ImageSlider::orderBy('id', 'DESC')->get();
-        return view('back.pages.imageSlider.imagesSlider', compact('imagesSlider'));
+        return view('back.pages.imageSlider.imagesSlider', compact('title','imagesSlider'));
     }
 
     /**
@@ -25,7 +26,8 @@ class ImageSliderController extends Controller
      */
     public function create()
     {
-        return view('back.pages.imageSlider.newImageSlider');
+        $title = "ساخت عکس های اسلایدر وبسایت";
+        return view('back.pages.imageSlider.newImageSlider',compact('title'));
     }
 
     /**
@@ -66,6 +68,7 @@ class ImageSliderController extends Controller
      */
     public function edit(ImageSlider $imageSlider)
     {
+        $title = "ویرایش عکس های اسلایدر وبسایت";
         return view('back.pages.imageSlider.editImageSlider', compact('imageSlider'));
     }
 

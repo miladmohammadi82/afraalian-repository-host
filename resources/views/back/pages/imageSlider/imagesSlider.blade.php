@@ -1,6 +1,10 @@
 @extends('back.index')
 @section('contentAdmin')
 
+@section('title')
+{{ $title }}
+@endsection
+
 <div class="container">
     <div class="row mt-5">
         <div class="col-12">
