@@ -6,7 +6,7 @@
     'aliases' => 
     array (
     ),
-    'reference' => 'fc7554c5b3bbe0a1206e1aaf6ef3fd5107a7a834',
+    'reference' => '34b5307fe87e18f92a07e4a9f941766993a92515',
     'name' => 'laravel/laravel',
   ),
   'versions' => 
@@ -476,15 +476,6 @@
         0 => 'v8.21.0',
       ),
     ),
-    'intervention/image' => 
-    array (
-      'pretty_version' => '2.5.1',
-      'version' => '2.5.1.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => 'abbf18d5ab8367f96b3205ca3c89fb2fa598c69e',
-    ),
     'jaybizzle/crawler-detect' => 
     array (
       'pretty_version' => 'v1.2.104',
@@ -553,7 +544,7 @@
       'aliases' => 
       array (
       ),
-      'reference' => 'fc7554c5b3bbe0a1206e1aaf6ef3fd5107a7a834',
+      'reference' => '34b5307fe87e18f92a07e4a9f941766993a92515',
     ),
     'laravel/sail' => 
     array (
@@ -1396,15 +1387,6 @@
       array (
       ),
       'reference' => 'b43b05cf43c1b6d849478965062b6ef73e223bb5',
-    ),
-    'unisharp/laravel-filemanager' => 
-    array (
-      'pretty_version' => 'v2.2.0',
-      'version' => '2.2.0.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => '34202590a88ecfc598c6dc70dae8b306710d4df2',
     ),
     'vlucas/phpdotenv' => 
     array (
