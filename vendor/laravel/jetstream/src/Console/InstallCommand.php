@@ -121,11 +121,10 @@ class InstallCommand extends Command
         // NPM Packages...
         $this->updateNodePackages(function ($packages) {
             return [
-                '@tailwindcss/forms' => '^0.2.1',
-                '@tailwindcss/typography' => '^0.3.0',
+                '@tailwindcss/forms' => '^0.3.1',
+                '@tailwindcss/typography' => '^0.4.0',
                 'alpinejs' => '^2.7.3',
-                'autoprefixer' => '^10.0.2',
-                'postcss-import' => '^12.0.1',
+                'postcss-import' => '^14.0.1',
                 'tailwindcss' => '^2.0.1',
             ] + $packages;
         });
@@ -158,6 +157,9 @@ class InstallCommand extends Command
 
         // Models...
         copy(__DIR__.'/../../stubs/app/Models/User.php', app_path('Models/User.php'));
+
+        // Factories...
+        copy(__DIR__.'/../../database/factories/UserFactory.php', base_path('database/factories/UserFactory.php'));
 
         // Actions...
         copy(__DIR__.'/../../stubs/app/Actions/Fortify/CreateNewUser.php', app_path('Actions/Fortify/CreateNewUser.php'));
@@ -263,19 +265,18 @@ EOF;
     protected function installInertiaStack()
     {
         // Install Inertia...
-        $this->requireComposerPackages('inertiajs/inertia-laravel:^0.3.5', 'laravel/sanctum:^2.6', 'tightenco/ziggy:^1.0');
+        $this->requireComposerPackages('inertiajs/inertia-laravel:^0.4.2', 'laravel/sanctum:^2.6', 'tightenco/ziggy:^1.0');
 
         // Install NPM packages...
         $this->updateNodePackages(function ($packages) {
             return [
-                '@inertiajs/inertia' => '^0.8.4',
-                '@inertiajs/inertia-vue3' => '^0.3.5',
-                '@inertiajs/progress' => '^0.2.4',
+                '@inertiajs/inertia' => '^0.9.1',
+                '@inertiajs/inertia-vue3' => '^0.4.2',
+                '@inertiajs/progress' => '^0.2.5',
                 '@tailwindcss/forms' => '^0.2.1',
                 '@tailwindcss/typography' => '^0.3.0',
                 'postcss-import' => '^12.0.1',
                 'tailwindcss' => '^2.0.1',
-                'autoprefixer' => '^10.0.2',
                 'vue' => '^3.0.5',
                 '@vue/compiler-sfc' => '^3.0.5',
                 'vue-loader' => '^16.1.2',
@@ -330,6 +331,9 @@ EOF;
 
         // Models...
         copy(__DIR__.'/../../stubs/app/Models/User.php', app_path('Models/User.php'));
+
+        // Factories...
+        copy(__DIR__.'/../../database/factories/UserFactory.php', base_path('database/factories/UserFactory.php'));
 
         // Actions...
         copy(__DIR__.'/../../stubs/app/Actions/Fortify/CreateNewUser.php', app_path('Actions/Fortify/CreateNewUser.php'));
