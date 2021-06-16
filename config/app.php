@@ -181,7 +181,9 @@ return [
         App\Providers\JetstreamServiceProvider::class,
         App\Providers\ViewServiceProvider::class,
         Biscolab\ReCaptcha\ReCaptchaServiceProvider::class,
-        Intervention\Image\ImageServiceProvider::class
+        Intervention\Image\ImageServiceProvider::class,
+        UniSharp\LaravelFilemanager\LaravelFilemanagerServiceProvider::class,
+
     ],
 
     /*
@@ -237,6 +239,7 @@ return [
         'Cart' => Darryldecode\Cart\Facades\CartFacade::class,
         'ReCaptcha' => Biscolab\ReCaptcha\Facades\ReCaptcha::class,
         'Image' => Intervention\Image\Facades\Image::class
+
     ],
 
 ];
