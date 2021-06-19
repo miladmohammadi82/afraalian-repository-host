@@ -179,7 +179,8 @@ return [
         App\Providers\JetstreamServiceProvider::class,
         App\Providers\ViewServiceProvider::class,
         Biscolab\ReCaptcha\ReCaptchaServiceProvider::class,
-
+        UniSharp\LaravelFilemanager\LaravelFilemanagerServiceProvider::class,
+        Intervention\Image\ImageServiceProvider::class,
     ],
 
     /*
@@ -194,7 +195,6 @@ return [
     */
 
     'aliases' => [
-
         'App' => Illuminate\Support\Facades\App::class,
         'Arr' => Illuminate\Support\Arr::class,
         'Artisan' => Illuminate\Support\Facades\Artisan::class,
@@ -234,8 +234,7 @@ return [
         'Image' => Intervention\Image\Facades\Image::class,
         'Cart' => Darryldecode\Cart\Facades\CartFacade::class,
         'ReCaptcha' => Biscolab\ReCaptcha\Facades\ReCaptcha::class,
-        'Image' => Intervention\Image\Facades\Image::class
-
+        'Image' => Intervention\Image\Facades\Image::class,
     ],
 
 ];
