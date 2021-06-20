@@ -76,7 +76,7 @@
                         <div class="input-fild-box form-group">
                             <label for="">تصویر شاخص</label>
                             <div class="input-group">
-                                <input type="file" name="index_image_article" id="">
+                                <input type="file" name="index_image" id="">
                             </div>
                             @error('index_image')
                                 <div class="text-danger">{{ $message }}</div>
