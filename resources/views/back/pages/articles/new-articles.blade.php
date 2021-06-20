@@ -16,7 +16,7 @@
                         </div>
                     @endif
 
-                    <form action="{{ route('articles.store.admin.panel') }}" method="post">
+                    <form action="{{ route('articles.store.admin.panel') }}" enctype="multipart/form-data" method="post">
                         @csrf
                         <div class="input-fild-box form-group">
                             <label for="">نام مطلب</label>
