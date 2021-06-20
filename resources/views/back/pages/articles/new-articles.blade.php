@@ -76,12 +76,7 @@
                         <div class="input-fild-box form-group">
                             <label for="">تصویر شاخص</label>
                             <div class="input-group">
-                                <span class="input-group-btn">
-                                <a id="lfm" data-input="thumbnail" data-preview="holder" class="btn btn-primary">
-                                    <i class="fa fa-picture-o"></i> انتخاب
-                                </a>
-                                </span>
-                                <input id="thumbnail" value="{{ old('index_image') }}" @error('index_image') is-invalid @enderror class="form-control" type="text" name="index_image">
+                                <input type="file" name="index_image_article" id="">
                             </div>
                             @error('index_image')
                                 <div class="text-danger">{{ $message }}</div>

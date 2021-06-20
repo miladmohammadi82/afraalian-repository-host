@@ -30,7 +30,7 @@ private static $installed = array (
     'aliases' => 
     array (
     ),
-    'reference' => '33f70342127cea03155aee8b5e58352f8a745385',
+    'reference' => 'b651d855c525eb062293e1bf5c0a05a3120ebb3d',
     'name' => 'laravel/laravel',
   ),
   'versions' => 
@@ -569,7 +569,7 @@ private static $installed = array (
       'aliases' => 
       array (
       ),
-      'reference' => '33f70342127cea03155aee8b5e58352f8a745385',
+      'reference' => 'b651d855c525eb062293e1bf5c0a05a3120ebb3d',
     ),
     'laravel/sail' => 
     array (
@@ -1412,6 +1412,15 @@ private static $installed = array (
       array (
       ),
       'reference' => 'b43b05cf43c1b6d849478965062b6ef73e223bb5',
+    ),
+    'unisharp/laravel-filemanager' => 
+    array (
+      'pretty_version' => 'v2.2.0',
+      'version' => '2.2.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '34202590a88ecfc598c6dc70dae8b306710d4df2',
     ),
     'vlucas/phpdotenv' => 
     array (

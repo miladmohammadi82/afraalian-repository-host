@@ -52,11 +52,13 @@ class ArticleController extends Controller
             'hit' => ['required', 'numeric'],
             'categories' => ['required'],
             'index_image' => ['required'],
-            
+
         ]);
 
         $article = Article::create($request->all());
         $article->categories()->attach($request->categories);
+
+        request()->file('index_image_article')->store('article');
 
         session()->flash('success', 'وضعیت با موفقیت تغییر کرد.');
         return redirect(route('articles.admin.panel'));
