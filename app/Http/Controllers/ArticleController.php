@@ -51,7 +51,7 @@ class ArticleController extends Controller
             'user_id' => ['required', 'numeric'],
             'hit' => ['required', 'numeric'],
             'categories' => ['required'],
-            'index_image' => ['required'],
+
 
         ]);
 
