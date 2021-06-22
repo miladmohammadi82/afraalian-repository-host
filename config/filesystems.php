@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'default' => env('FILESYSTEM_DRIVER', 'local'),
+    'default' => env('FILESYSTEM_DRIVER', 'public_html'),
 
     /*
     |--------------------------------------------------------------------------
@@ -35,11 +35,11 @@ return [
             'root' => storage_path('app'),
         ],
 
-        'public' => [
+        'public_html' => [
             'driver' => 'local',
-            'root' => public_path('../public_html'),
+            'root' => '/home/afraalia/public_html/storage',
             'url' => env('APP_URL').'/storage',
-            'visibility' => 'public_html',
+            'visibility' => 'public',
         ],
 
         's3' => [
