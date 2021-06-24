@@ -81,7 +81,7 @@
                                     <i class="fa fa-picture-o"></i> انتخاب
                                 </a>
                                 </span>
-                                <input id="thumbnail" value="{{ $articles->index_image }}" @error('index_image') is-invalid @enderror class="form-control" type="text" name="index_image">
+                                <input id="thumbnail" value="{{old('index_image')}}" @error('index_image') is-invalid @enderror class="form-control" type="text" name="index_image">
                             </div>
                             @error('index_image')
                                 <div class="text-danger">{{ $message }}</div>
