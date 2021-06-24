@@ -13,9 +13,11 @@
                 <div class="swiper-container img">
                     <div class="swiper-wrapper">
                         @foreach ($imagesSlider as $imageSlider)
-                            <div class="swiper-slide">
-                                <img class="w-100" style="border-radius: 20px" src="{{ $imageSlider->index_image }}" >
-                            </div>
+                            <a href="{{ $imageSlider->url }}">
+                                <div class="swiper-slide">
+                                    <img class="w-100" style="border-radius: 20px" src="{{ $imageSlider->index_image }}" >
+                                </div>
+                            </a>
                         @endforeach
                     </div>
                     <div class="swiper-pagination swiper-pagination-white"></div>
