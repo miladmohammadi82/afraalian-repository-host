@@ -18,10 +18,9 @@ class ArticleController extends Controller
      */
     public function index()
     {
-        $title = "مدیریت  مطالب";
         $articles = Article::orderBy('id', 'DESC')->get();
 
-        return view('back.pages.articles.articles', compact('articles', 'title'));
+        return view('back.pages.articles.articles', compact('articles'));
     }
 
     /**
@@ -31,9 +30,8 @@ class ArticleController extends Controller
      */
     public function create()
     {
-        $title = "افرودن مطلب جدید";
         $categories = Category::all()->pluck('title', 'id');
-        return view('back.pages.articles.new-articles', compact('categories', 'title'));
+        return view('back.pages.articles.new-articles', compact('categories',));
     }
 
     /**
@@ -83,9 +81,8 @@ class ArticleController extends Controller
      */
     public function edit(Article $articles)
     {
-        $title = "ویرایش مطلب";
         $categories = Category::all()->pluck('title', 'id');
-        return view('back.pages.articles.edit-articles', compact('articles', 'categories', 'title'));
+        return view('back.pages.articles.edit-articles', compact('articles', 'categories'));
     }
 
     /**
