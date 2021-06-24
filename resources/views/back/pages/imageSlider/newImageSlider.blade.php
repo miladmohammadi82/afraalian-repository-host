@@ -28,20 +28,27 @@
                                     <i class="fa fa-picture-o"></i> انتخاب
                                 </a>
                                 </span>
-                                <input id="thumbnail" value="{{ old('url') }}" @error('url') is-invalid @enderror class="form-control" type="text" name="url">
+                                <input id="thumbnail" value="{{ old('image') }}" @error('image') is-invalid @enderror class="form-control" type="text" name="image">
                             </div>
+                             @error('image')
+                                <div class="text-danger">{{ $message }}</div>
+                            @enderror
+                        </div>
+
+                        <div class="input-fild-box form-group">
+                            <label for="">url</label>
+                            <input type="text" class="mt-2 form-control @error('url') is-invalid @enderror"
+                                placeholder="url" value="{{ old('url') }}" name="url" id="">
                             @error('url')
                                 <div class="text-danger">{{ $message }}</div>
                             @enderror
                         </div>
 
-
-
                         <div class="input-fild-box form-group">
                             <label for="">Alt</label>
-                            <input type="text" class="mt-2 form-control @error('image') is-invalid @enderror"
-                                placeholder="Alt" value="{{ old('image') }}" name="image" id="">
-                            @error('image')
+                            <input type="text" class="mt-2 form-control @error('alt') is-invalid @enderror"
+                                placeholder="Alt" value="{{ old('alt') }}" name="alt" id="">
+                            @error('alt')
                                 <div class="text-danger">{{ $message }}</div>
                             @enderror
                         </div>
