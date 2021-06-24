@@ -47,7 +47,7 @@
                             @foreach ($imagesSlider as $imageSlider)
                                 <tr>
                                     <td>{{ $imageSlider->id }}</td>
-                                    <td><img src="{{ $imageSlider->index_image }}" alt="" height="50" width="50"></td>
+                                    <td><img src="{{ $imageSlider->image }}" alt="" height="50" width="50"></td>
                                     <td>{{ $imageSlider->name }}</td>
                                     <td>
                                         @if ($imageSlider->status == 1)

@@ -15,7 +15,7 @@
                         @foreach ($imagesSlider as $imageSlider)
                             <a href="{{ $imageSlider->url }}">
                                 <div class="swiper-slide">
-                                    <img class="w-100" style="border-radius: 20px" src="{{ $imageSlider->index_image }}" >
+                                    <img class="w-100" style="border-radius: 20px" src="{{ $imageSlider->image }}" >
                                 </div>
                             </a>
                         @endforeach
