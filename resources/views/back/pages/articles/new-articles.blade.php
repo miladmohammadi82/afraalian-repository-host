@@ -83,7 +83,6 @@
                                 </span>
                                 <input id="thumbnail" value="{{ $articles->index_image }}" @error('index_image') is-invalid @enderror class="form-control" type="text" name="index_image">
                             </div>
-                            <img id="holder" src="{{ $articles->index_image }}" style="margin-top:15px;max-height:100px;" />
                             @error('index_image')
                                 <div class="text-danger">{{ $message }}</div>
                             @enderror
