@@ -12,15 +12,11 @@
             <div class="container-fluid">
                 <div class="swiper-container img">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <img class="w-100" style="border-radius: 20px" src="{{ asset('assets/slider/banner1.jpg') }}" >
-                        </div>
-                        <div class="swiper-slide">
-                            <img class="w-100" style="border-radius: 20px" src="{{ asset('assets/slider/banner2.jpg') }}" >
-                        </div>
-                        <div class="swiper-slide">
-                            <img class="w-100" style="border-radius: 20px" src="{{ asset('assets/slider/banner3.jpg') }}" >
-                        </div>
+                        @foreach ($imagesSlider as $imageSlider)
+                            <div class="swiper-slide">
+                                <img class="w-100" style="border-radius: 20px" src="{{ $imageSlider->index_image }}" >
+                            </div>
+                        @endforeach
                     </div>
                     <div class="swiper-pagination swiper-pagination-white"></div>
                     <div class="swiper-button-next swiper-button-white"></div>

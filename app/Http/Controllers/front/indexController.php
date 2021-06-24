@@ -5,6 +5,7 @@ namespace App\Http\Controllers\front;
 use App\Http\Controllers\Controller;
 use App\Models\FrontModels\Category;
 use App\Models\FrontModels\Product;
+use App\Models\ImageSlider;
 use App\Models\ProductComment;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -23,6 +24,7 @@ class indexController extends Controller
 
         // $id = DB::table('category_product')->where('product_id', '=' , 'category_id');
 
+        $imagesSlider = ImageSlider::orderBy('id', 'DESC')->get();
 
         $category = Category::findOrFail(2);
         $products = $category->products()->get();
@@ -39,6 +41,7 @@ class indexController extends Controller
             'products',
             'productsporbazdid',
             'articlesPorbazdid',
+            'imagesSlider',
         ));
     }
 
