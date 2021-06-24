@@ -12,6 +12,7 @@ class ImageSlider extends Model
     protected $fillable = [
         'url',
         'image',
+        'alt'
     ];
 
     protected $attributes = [
