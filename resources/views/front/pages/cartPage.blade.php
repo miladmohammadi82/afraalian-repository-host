@@ -229,6 +229,32 @@
             </div>
         </div>
 
+        <div class="container price-info-view">
+            <h4>جمع کل سبد</h4>
+            <table class="table-product-table-catr-page">
+                <tbody>
+
+                    <tr class="row-product-table-catr-page">
+                        <td class="product-name">
+                            <span>جمع جز</span>
+                            <h5>{{ number_format(\Cart::getTotal()) }}</h5>
+                        </td>
+                        <td class="product-name">
+                            <span>حمل و نقل</span>
+                            <h5>رایگان</h5>
+                        </td>
+
+                        <td class="product-name">
+                            <span>جمع کل</span>
+                            <h5>&nbsp;{{ number_format(\Cart::getTotal()) }}&nbsp;<span>تومان</span></h5>
+                        </td>
+                        <td class="product-name">
+                            <button type="submit" href="{{ route('checkout.page') }}" class="btn btn-warning-me w-100 mt-2" form="update-cart">ادامه فرایند پرداخت</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
 
         <div class="btn-pay-nahaeCart-page-box">
             <a href="{{ route('checkout.page') }}" class="btn btn-danger w-100">ادامه فرایند پرداخت</a>
