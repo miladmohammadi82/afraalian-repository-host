@@ -229,8 +229,7 @@
             </div>
         </div>
 
-        <div class="container price-info-view">
-            <h4>جمع کل سبد</h4>
+        <div class="container price-info-view" style="margin: 134px auto;">
             <table class="table-product-table-catr-page">
                 <tbody>
 
