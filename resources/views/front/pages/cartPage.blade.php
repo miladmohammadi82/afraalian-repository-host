@@ -217,19 +217,12 @@
                     <input type="text" placeholder="کد تخفیف" name="" class="form-control">
                     <button class="btn code-tacfif-btn-in-cart-page">اعمال کد</button>
                 </div>
-
-                <div class="price-total-for-mobile-in-product-cart">
-                    <h6>جمع کل</h6>
-                    :&nbsp;
-                    <span>{{ number_format(\Cart::getTotal()) }}</span><span>تومان</span>
-
-                </div>
                 <button type="submit" class="btn btn-warning-me w-100 mt-2" form="update-cart">بروزرسانی سبد خرید</button>
 
             </div>
         </div>
 
-        <div class="container price-info-view" style="margin: 134px auto;">
+        <div class="container price-info-view" style="margin: 134px auto 0;">
             <table class="table-product-table-catr-page">
                 <tbody>
 
