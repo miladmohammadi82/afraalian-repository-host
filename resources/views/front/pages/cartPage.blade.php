@@ -229,7 +229,7 @@
                     <tr class="row-product-table-catr-page">
                         <td class="product-name">
                             <span>جمع جز</span>
-                            <h5>{{ number_format(\Cart::getTotal()) }}</h5>
+                            <h5>{{ number_format(\Cart::getTotal()) }}&nbsp;<span>تومان</span></h5>
                         </td>
                         <td class="product-name">
                             <span>حمل و نقل</span>
