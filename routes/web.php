@@ -106,7 +106,8 @@ Route::prefix('contact')->group(function (){
 
 
 Route::get('/about', function() {
-    return view('front.pages.aboutPage');
+    $title = "درباره ما";
+    return view('front.pages.aboutPage', compact('title'));
 })->name('about.page');
 
 

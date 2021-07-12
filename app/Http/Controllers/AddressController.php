@@ -105,7 +105,7 @@ class AddressController extends Controller
         $address->update();
 
 
-        return redirect(route('address.admin.panel'));
+        return redirect(route('address.user.profile'));
     }
 
     /**

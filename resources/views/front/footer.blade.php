@@ -95,9 +95,9 @@
             </div>
             <div class="dropdown-footer" v-if="activeDrop2">
                 <ul class="menu-items">
-                    <li><a href="#">تماس باما</a></li>
-                    <li><a href="#">درباره ما</a></li>
-                    <li><a href="#">پشتیبانی</a></li>
+                    <li><a href="{{ route('contact.page') }}">تماس باما</a></li>
+                    <li><a href="{{ route('about.page') }}">درباره ما</a></li>
+                    <li><a href="{{ route('contact.page') }}">پشتیبانی</a></li>
                     <li><a href="#">وبلاگ</a></li>
                 </ul>
             </div>

@@ -1,6 +1,10 @@
 @extends('front.index')
 @section('content')
 
+@section('title')
+    {{ $title }}
+@endsection
+
 <div class="container container-cart-page">
 
 
