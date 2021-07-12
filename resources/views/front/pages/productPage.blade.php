@@ -60,7 +60,7 @@
             <div class="info-product">
                 <div class="items-main-product-page">
                     <div class="title">
-                        <h1 class="text-product">عسل آویشن 5 کیلویی</h1>
+                        <h1 class="text-product">{{ $product->name }}</h1>
                     </div>
                     <div class="servisess-product-page">
                         <div class="help-syntax-order">
