@@ -44,7 +44,7 @@
 
         </div>
         <div class="description-article">
-            <h2>{!! $article->description !!}</h2>
+            <p style="font-size: 19px !important;">{!! $article->description !!}</p>
         </div>
         <br>
         <hr>
