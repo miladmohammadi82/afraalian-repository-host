@@ -23,7 +23,7 @@
                     </div>
 
                     <div class="logo comp">
-                        <h2>logo</h2>
+                        <img src="{{ asset('assets/logoWeb.png') }}" alt="">
                     </div>
 
                     <ul class="main-menu">
@@ -146,7 +146,7 @@
                                                 href="{{ route('profile.show') }}">{{ Auth::user()->name }}</a></div>
                                         <ul class="list-info-action">
                                             <li class="mt-2">
-                                                <a href="{{ route('profile.show') }}"><i
+                                                <a href="https://afraalian.com/profile"><i
                                                         class="fa fa-user fa-1x"></i>&nbsp;پروفایل</a>
                                             </li>
                                             <li class="logout-list-profile-dropdown">
@@ -177,7 +177,7 @@
             <div class="header-mobile" :class="{ showMenu:mobileMenu }">
 
                 <div class="header-menu">
-                    <h3 class="text-center">logoo</h3>
+                    <img src="{{ asset('assets/logoWeb.png') }}" alt="">
                     <form action="{{ route('search') }}" class="search-box-menu-mobile" method="GET">
                         <input type="text" name="query" value="{{ request()->input('query') }}"
                         placeholder="جستجو در افراآلیان">

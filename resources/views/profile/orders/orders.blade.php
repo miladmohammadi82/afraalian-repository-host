@@ -44,7 +44,7 @@
                         </td>
                         <td class="comment-table-mobile-td">
                             <h4>قیمت کل</h4>
-                            {{ number_format($item->price) }}تومان
+                            {{ number_format($item->price) }} تومان
                         </td>
 
                         <td class="comment-table-mobile-td">
