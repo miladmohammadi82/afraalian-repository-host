@@ -22,7 +22,7 @@ class PaymentController extends Controller
 
 
         $jsonData = json_encode($data);
-        $ch = curl_init('https://zarinpal.com/pg/rest/WebGate/PaymentRequest.json');
+        $ch = curl_init('https://www.zarinpal.com/pg/rest/WebGate/PaymentRequest.json');
         curl_setopt($ch, CURLOPT_USERAGENT, 'ZarinPal Rest Api v1');
         curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'POST');
         curl_setopt($ch, CURLOPT_POSTFIELDS, $jsonData);
@@ -45,7 +45,7 @@ class PaymentController extends Controller
         } else {
             if ($result["Status"] == 100) {
                 $array = ['Authority'=>$result["Authority"]];
-                return redirect()->to('https://zarinpal.com/pg/StartPay/' . $result["Authority"]);
+                return redirect()->to('https://www.sandbox.zarinpal.com/pg/StartPay/' . $result["Authority"]);
 
             } else {
                 echo 'ERR: ' . $result["Status"];
@@ -66,7 +66,7 @@ class PaymentController extends Controller
         $data = array('MerchantID' => $MerchantID, 'Authority' => $Authority, 'Amount' => $order->grand_total);
 
         $jsonData = json_encode($data);
-        $ch = curl_init('https://zarinpal.com/pg/rest/WebGate/PaymentVerification.json');
+        $ch = curl_init('https://www.zarinpal.com/pg/rest/WebGate/PaymentVerification.json');
         curl_setopt($ch, CURLOPT_USERAGENT, 'ZarinPal Rest Api v1');
         curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'POST');
         curl_setopt($ch, CURLOPT_POSTFIELDS, $jsonData);
