@@ -45,7 +45,7 @@ class PaymentController extends Controller
         } else {
             if ($result["Status"] == 100) {
                 $array = ['Authority'=>$result["Authority"]];
-                return redirect()->to('https://www.sandbox.zarinpal.com/pg/StartPay/' . $result["Authority"]);
+                return redirect()->to('https://www.zarinpal.com/pg/StartPay/' . $result["Authority"]);
 
             } else {
                 echo 'ERR: ' . $result["Status"];
