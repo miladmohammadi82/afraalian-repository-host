@@ -63,7 +63,7 @@ class PaymentController extends Controller
 
         $Authority = $request->Authority;
 
-        $data = array('MerchantID' => $MerchantID, 'Authority' => $Authority, 'Amount' => $order->grand_total);
+        $data = array('MerchantID' => $MerchantID, 'Authority' => $Authority, 'Amount' => $order->grand_total.'0');
 
         $jsonData = json_encode($data);
         $ch = curl_init('https://www.zarinpal.com/pg/rest/WebGate/PaymentVerification.json');
