@@ -23728,7 +23728,7 @@ $(document).ready(function () {
                 items: 1
             },
             400: {
-                items: 2
+                items: 1
             },
             600: {
                 items: 3
