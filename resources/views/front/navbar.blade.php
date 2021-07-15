@@ -196,7 +196,7 @@
                 <div class="items-menu-mobile">
                     <ul>
                         <li>
-                            <a><span class="fas fa-home"></span>&nbsp;خانه</a>
+                            <a href="{{ route('index.page') }}"><span class="fas fa-home"></span>&nbsp;خانه</a>
                         </li>
                         @foreach ($categories as $category)
                             <li>

@@ -241,7 +241,7 @@
                             <h5>&nbsp;{{ number_format(\Cart::getTotal()) }}&nbsp;<span>تومان</span></h5>
                         </td>
                         <td class="product-name">
-                            <button type="submit" href="{{ route('checkout.page') }}" class="btn btn-warning-me w-100 mt-2">ادامه فرایند پرداخت</button>
+                            <a href="{{ route('checkout.page') }}" class="btn btn-warning-me w-100 mt-2">ادامه فرایند پرداخت</a>
                         </td>
                     </tr>
                 </tbody>
