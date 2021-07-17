@@ -214,11 +214,11 @@
 
 
                         <li>
-                            <a href="{{ route('profile.show.comments') }}"><span class="fas fa-comment-exclamation"></span>&nbsp;درباره ما</a>
+                            <a href="{{ route('about.page') }}"><span class="fas fa-comment-exclamation"></span>&nbsp;درباره ما</a>
                         </li>
 
                         <li>
-                            <a href="{{ route('profile.show.comments') }}"><span class="fas fa-phone"></span>&nbsp;تماس با ما</a>
+                            <a href="{{ route('contact.page') }}"><span class="fas fa-phone"></span>&nbsp;تماس با ما</a>
                         </li>
 
                     </ul>
