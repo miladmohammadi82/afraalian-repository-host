@@ -12,7 +12,7 @@
 @foreach($products as $product)
     <url>
         <loc>https://afraalian.com/product/{{ $product->slug }}</loc>
-        <lastmod>{{ $product->updated_at }}</lastmod>
+        <lastmod>2021-05-26T09:14:10+00:00</lastmod>
         <priority>0.80</priority>
     </url>
 @endforeach
@@ -20,7 +20,7 @@
 @foreach($articles as $article)
     <url>
         <loc>https://afraalian.com/article/{{ $article->slug }}</loc>
-        <lastmod>{{ $article->updated_at }}</lastmod>
+        <lastmod>2021-05-26T09:14:10+00:00</lastmod>
         <priority>0.80</priority>
     </url>
 @endforeach
