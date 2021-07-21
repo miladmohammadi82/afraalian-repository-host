@@ -101,7 +101,7 @@
                             </div>
                             <div class="title-contact-page">
                                 <h6>تماس بگیرید</h6>
-                                <small>013-34704745</small>
+                                <small>09935622520</small>
                             </div>
                         </li>
 
