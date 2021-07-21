@@ -8569,6 +8569,68 @@
             "install-path": "../tijsverkoyen/css-to-inline-styles"
         },
         {
+            "name": "trez/raygan-sms",
+            "version": "2.0.3",
+            "version_normalized": "2.0.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/farhadmirzapour/RayganSms.git",
+                "reference": "30eb17c640e486519fe71cdbe287334e8be8381a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/farhadmirzapour/RayganSms/zipball/30eb17c640e486519fe71cdbe287334e8be8381a",
+                "reference": "30eb17c640e486519fe71cdbe287334e8be8381a",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "guzzlehttp/guzzle": "*",
+                "illuminate/notifications": "*",
+                "illuminate/support": "*",
+                "php": ">=5.6.4"
+            },
+            "time": "2020-06-29T22:39:31+00:00",
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Trez\\RayganSms\\RayganSmsServiceProvider"
+                    ],
+                    "aliases": {
+                        "RayganSms": "Trez\\RayganSms\\Facades"
+                    }
+                }
+            },
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "Trez\\RayganSms\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Farhad Mirzapour",
+                    "email": "farhad.mirzapour@gmail.com",
+                    "homepage": "http://farhadnote.ir"
+                }
+            ],
+            "description": "A simple API extension for send text message By Raygan Sms",
+            "keywords": [
+                "raygansms",
+                "trez"
+            ],
+            "support": {
+                "issues": "https://github.com/farhadmirzapour/RayganSms/issues",
+                "source": "https://github.com/farhadmirzapour/RayganSms"
+            },
+            "install-path": "../trez/raygan-sms"
+        },
+        {
             "name": "unisharp/laravel-filemanager",
             "version": "v2.2.0",
             "version_normalized": "2.2.0.0",
