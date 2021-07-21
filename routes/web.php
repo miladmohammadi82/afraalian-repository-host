@@ -27,6 +27,7 @@ use App\Http\Controllers\ProductController;
 use App\Http\Controllers\SitemapController;
 use Faker\Provider\cs_CZ\Address;
 use Illuminate\Support\Facades\Route;
+use Trez\RayganSms\Facades\RayganSms;
 
 /*
 |--------------------------------------------------------------------------
@@ -40,6 +41,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [FrontIndexController::class, 'index'])->name('index.page');
+
+Route::get('/testSMS', function () {
+    echo  RayganSms::sendAuthCode(env('RAYGANSMS_PHONE_NUMBER'),'Welcome ...');
+});
 
 Route::get('/product/{product}', [FrontIndexController::class, 'show'])->name('show.product.index.page');
 

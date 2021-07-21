@@ -181,6 +181,7 @@ return [
         Biscolab\ReCaptcha\ReCaptchaServiceProvider::class,
         UniSharp\LaravelFilemanager\LaravelFilemanagerServiceProvider::class,
         Intervention\Image\ImageServiceProvider::class,
+        Trez\RayganSms\RayganSmsServiceProvider::class,
     ],
 
     /*
@@ -235,6 +236,7 @@ return [
         'Cart' => Darryldecode\Cart\Facades\CartFacade::class,
         'ReCaptcha' => Biscolab\ReCaptcha\Facades\ReCaptcha::class,
         'Image' => Intervention\Image\Facades\Image::class,
+        'RayganSms' => Trez\RayganSms\Facades\RayganSms::class,
     ],
 
 ];
