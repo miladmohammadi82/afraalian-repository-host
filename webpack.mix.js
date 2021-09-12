@@ -1,5 +1,5 @@
 const mix = require('laravel-mix');
-
+const path = require('path')
 /*
  |--------------------------------------------------------------------------
  | Mix Asset Management
@@ -34,9 +34,19 @@ mix.scripts([
     'resources/js/main.js',
     'resources/js/bootstrap.min.js',
     'resources/js/stand-alone-button.js',
-    'resources/js/app.js',
+    'resources/js/slide-owl.js',
     'resources/js/select2.min.js',
 ], 'public/js/app.js')
+
+mix.js('resources/js/app.js', 'public/js').vue().webpackConfig({
+    output: {chunkFilename: 'js/[name].[contenthash].js'},
+    resolve: {
+        alias: {
+            'vue$': 'vue/dist/vue.runtime.js',
+            '@': path.resolve('resource/js'),
+        },
+    },
+})
 
 
 if (mix.inProduction()) {

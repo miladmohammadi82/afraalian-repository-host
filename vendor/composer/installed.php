@@ -5,7 +5,7 @@
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => 'c9026b5c9cbacbf1aba635c51278e5971d94158d',
+        'reference' => '932429c694f35be466d7be94bf83a3d6663549f4',
         'name' => 'laravel/laravel',
         'dev' => true,
     ),
@@ -433,6 +433,15 @@
                 0 => 'v8.47.0',
             ),
         ),
+        'inertiajs/inertia-laravel' => array(
+            'pretty_version' => 'v0.4.4',
+            'version' => '0.4.4.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../inertiajs/inertia-laravel',
+            'aliases' => array(),
+            'reference' => '3a08d87bc8de80f774f889918b696e2d3a2d11f1',
+            'dev_requirement' => false,
+        ),
         'intervention/image' => array(
             'pretty_version' => 'dev-master',
             'version' => 'dev-master',
@@ -510,7 +519,7 @@
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => 'c9026b5c9cbacbf1aba635c51278e5971d94158d',
+            'reference' => '932429c694f35be466d7be94bf83a3d6663549f4',
             'dev_requirement' => false,
         ),
         'laravel/sail' => array(

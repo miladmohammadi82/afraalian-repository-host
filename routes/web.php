@@ -27,6 +27,7 @@ use App\Http\Controllers\ProductController;
 use App\Http\Controllers\SitemapController;
 use Faker\Provider\cs_CZ\Address;
 use Illuminate\Support\Facades\Route;
+use Inertia\Inertia;
 use Trez\RayganSms\Facades\RayganSms;
 
 /*
@@ -219,6 +220,22 @@ Route::prefix('admin/images-slider')->middleware('checkRole')->group(function ()
     Route::post('/delete-images-slider/{id}', [ImageSliderController::class, 'destroy'])->name('imagesSlider.destroy.admin.panel');
     Route::get('/edit-images-slider-status/{id}', [ImageSliderController::class, 'editStatus'])->name('imagesSlider.edit.status.admin.panel');
 });
+
+Route::prefix('admin')->middleware('checkRole')->group(function (){
+    Route::get('/home', function(){
+        return Inertia::render('home');
+    });
+
+    Route::get('/about', function(){
+        return Inertia::render('about');
+    });
+
+    Route::get('/contact', function(){
+        return Inertia::render('contact');
+    });
+});
+
+
 
 // End admin router
 
