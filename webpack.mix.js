@@ -19,7 +19,7 @@ mix.styles([
     'resources/css/chosen.min.css',
     'resources/css/select2.min.css',
 
-], 'public/css/app.css')
+], '../public_html/css/app.css')
 
 
 // mix.js('resources/js/app.js', 'public/js')
@@ -36,9 +36,9 @@ mix.scripts([
     'resources/js/stand-alone-button.js',
     'resources/js/slide-owl.js',
     'resources/js/select2.min.js',
-], 'public/js/app.js')
+], '../public_html/js/app.js')
 
-mix.js('resources/js/app.js', 'public/js').vue().webpackConfig({
+mix.js('resources/js/app.js', '../public_html/js').vue().webpackConfig({
     output: {chunkFilename: 'js/[name].[contenthash].js'},
     resolve: {
         alias: {
